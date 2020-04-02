@@ -1,11 +1,11 @@
 version: 1
 kafka:
-  server: "ec2-54-203-161-163.us-west-2.compute.amazonaws.com"
+  server: "ec2-52-43-100-165.us-west-2.compute.amazonaws.com"
   port: "9092"
   topic: "events"
 datastore:
   user: "user"
   password: "password"
-  hostname: "ec2-54-203-161-163.us-west-2.compute.amazonaws.com"
+  hostname: "ec2-52-43-100-165.us-west-2.compute.amazonaws.com"
   port: "3306"
   db: "events"
