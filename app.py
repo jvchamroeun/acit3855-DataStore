@@ -12,8 +12,13 @@ from threading import Thread
 import json
 import logging.config
 
-with open('app_conf.yml', 'r') as f:
-    app_config = yaml.safe_load(f.read())
+try:
+    with open('/config/app_conf.yml', 'r') as f:
+        app_config = yaml.safe_load(f.read())
+except IOError:
+    with open('app_conf.yml', 'r') as f:
+        app_config = yaml.safe_load(f.read())
+
 
 with open('log_conf.yml', 'r') as f:
     log_config = yaml.safe_load(f.read())
